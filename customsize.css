@@ -1,0 +1,51 @@
+/* default43.css */
+@import 'default';
+
+/* タイトルのフォントサイズを少し小さめに調整 */
+h1 {
+  font-size: 1.4em; /* サイズ調整 */
+  line-height: 1.2; /* 行間を適切に調整 */
+  height: 130px; /* 固定の高さ（必要に応じて調整可能） */
+  overflow: hidden; /* 長いテキストがあふれないように設定 */
+}
+
+h4 {
+  font-size: 0.7em; /* 文字をもう少し大きく */
+  color: #666; /* 色を変更 */
+  font-weight: 400; /* ウェイトをレギュラーに設定 */
+  line-height: 1.5; /* 行間を少し広めに設定 */
+}
+
+h5 {
+  font-size: 0.7em; /* 元の0.9emより小さめに */
+  height: 2.4em; /* 高さを固定して、二行がマックスになるように設定 */
+  overflow: hidden; /* はみ出た部分を隠す */
+  color: #333; /* 色を変更 */
+}
+
+h6 {
+  font-size: 0.5em; /* 元の0.9emより小さめに */
+  height: 2.2em; /* 高さを固定して、二行がマックスになるように設定 */
+  overflow: hidden; /* はみ出た部分を隠す */
+  color: #666; /* 色を変更 */
+}
+
+/* コンテンツを上部に配置 */
+section {
+  display: block;
+  place-content: start; /* コンテンツを上に配置 */
+  height: 920px; /* スライドの高さに合わせる */
+  padding: 45px 78.5px; /* 上のpaddingを増やして調整 */
+  width: 920px; /* スライドの幅に合わせる */
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+  height: 95px; /* 固定高さ（必要に応じて調整） */
+  overflow: hidden; /* はみ出た部分を隠す */
+  text-overflow: ellipsis; /* テキストが切れる場合に省略記号を表示 */
+  white-space: normal;
+}
