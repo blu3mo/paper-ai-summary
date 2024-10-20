@@ -32,10 +32,15 @@ Before you begin, ensure you have the following software and libraries installed
    pip install openai bibtexparser pydantic pandas
    ```
 
-3. Set up the OpenAI API key and endpoint in your environment variables. You can do this by adding the following lines to your shell profile (e.g., `.bashrc`, `.zshrc`, or `.bash_profile`):
+3. Set up the OpenAI API key and endpoint in your environment variables. 
+If you are using Azure OpenAI, add the following lines to your shell profile (e.g., `.bashrc`, `.zshrc`, or `.bash_profile`):
    ```bash
-   export AZURE_OPENAI_API_KEY='your_openai_api_key_here'
-   export AZURE_OPENAI_ENDPOINT='your_openai_endpoint_here'
+   export AZURE_OPENAI_API_KEY='your_azure_openai_api_key_here'
+   export AZURE_OPENAI_ENDPOINT='your_azure_openai_endpoint_here'
+   ```
+   If you are using the regular OpenAI API, uncomment the relevant lines in the code and set your API key as follows:
+   ```bash
+   export OPENAI_API_KEY='your_openai_api_key_here'
    ```
 
 ## Usage
