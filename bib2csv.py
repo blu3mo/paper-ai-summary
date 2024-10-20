@@ -7,12 +7,16 @@ import argparse
 from pydantic import BaseModel
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# OpenAI APIキーを設定してください
+# Azure OpenAIを使用する際はこちらを使用
 openai = openai.AzureOpenAI(
     api_key = os.getenv('AZURE_OPENAI_API_KEY'),
     api_version="2024-08-01-preview",
     azure_endpoint=os.getenv('AZURE_OPENAI_ENDPOINT')
 )
+
+# Azure OpenAIではなく通常のOpenAI APIを使用する場合は、上のコードをコメントアウトして以下のコードを使用してください。
+# api_key = os.getenv('OPENAI_API_KEY')
+# openai.api_key = api_key
 
 # 出力形式のクラス定義
 class PaperSummary(BaseModel):
